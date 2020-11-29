@@ -109,19 +109,25 @@ margin: 20px auto;
 
 
 footer { grid-area: footer;
-background-color: black; }
+background-color: black;
+ }
 
 footer img{
   width: 30px;
   height: 30px;
   padding: 10px;
   display:inline-block;
+  margin: auto;
 }
 
 footer p,a {
   text-align: center;
   font-size: 13px;
   color: white;
+}
+
+footer a img {
+  margin: auto;
 }
 
 @media screen and (max-width: 375px) {
