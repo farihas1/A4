@@ -1,0 +1,138 @@
+html, body, .grid-container { height: 100%; margin: 0; 
+font-family: 'Lato',sans-serif;
+}
+
+.grid-container {
+  display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.5fr 3fr 0.5fr 0.2fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "logo nav nav nav"
+    "header header header header"
+    ". about-you payment ."
+    ". next next ."
+    "footer footer footer footer";
+}
+
+logo img {
+   grid-area: logo;
+   max-width: 50%;
+   max-height: 50%;
+   margin: auto;
+ }
+ logo {
+   background-color: black;
+   grid-area: logo;
+ }
+
+nav {
+   grid-area: nav;
+   background-color: black;
+ }
+ 
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color:black;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 36px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color:white;
+  color:black;
+}
+
+
+header { grid-area: header; }
+
+header h1 {
+  text-align:center;
+  color: green;
+  margin: auto;
+  padding-top: 70px;
+
+}
+
+about-you {
+   grid-area: about-you; 
+   }
+
+payment {
+  grid-area: payment;
+  }
+
+/* For presentation only, no need to copy the code below */
+.grid-container *:after {
+  content:attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+about-you, payment {
+  margin: auto;
+  padding: 20px;
+}
+
+next {
+  grid-area: next;
+}
+
+next button a {
+  text-decoration: none;
+  color: black;
+}
+
+next button:hover, a:hover {
+  background-color: black;
+  color:green;
+}
+
+
+next button {
+  background-color: orange;
+  border: black;
+  border-style: solid; 
+  margin: auto;
+  cursor: pointer;
+  text-decoration: none;
+  display: table;
+}
+
+payment #cvc, payment #exp {
+  width: 40px;
+}
+
+payment #postcode {
+  width: 60px;
+}
+
+footer { grid-area: footer;
+background-color: black; }
+
+footer img{
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  display:inline-block;
+}
+
+footer p,a {
+  text-align: center;
+  font-size: 13px;
+  color: white;
+}

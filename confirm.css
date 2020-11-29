@@ -1,0 +1,162 @@
+html, body, .grid-container { height: 100%; margin: 0; 
+font-family: 'Lato',sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.4fr 2.7fr 1fr 0.2fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "logo nav nav nav"
+    "header header header header"
+    "donation about-you payment stay-connected"
+    ". confirm confirm ."
+    "footer footer footer footer";
+}
+
+logo img {
+   grid-area: logo;
+   width: 50%;
+   height: 50%;
+   margin: auto;
+ }
+
+ logo {
+   background-color: black;
+ }
+
+nav {
+   grid-area: nav;
+   background-color: black;
+ }
+ 
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color:black;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 36px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color:white;
+  color:black;
+}
+
+
+header {
+  grid-area: header;
+  margin: auto;
+  }
+
+header h1 {
+  margin: auto;
+}
+
+donation {
+  grid-area: donation; 
+  margin: auto;
+
+}
+
+donation button{
+  border-style: solid;
+  border-color: green;
+  background-color: white;
+  border-width: thick;
+}
+
+donation button p {
+  color: green;
+  font-size: 13pt;
+}
+
+about-you {
+  grid-area: about-you; 
+  margin: auto;
+  }
+
+about-you p { 
+  float: left;
+  margin: none;
+  margin-top:-5%;
+}
+
+
+payment {
+  grid-area: payment;
+  margin: auto;
+  display: inline-block;
+  }
+
+  about-you h2, payment h2, stay-connected h2 {
+    color: green;
+
+  }
+
+stay-connected {
+  grid-area: stay-connected;
+  margin: auto;
+}
+
+stay-connected p {
+  margin: auto;
+  padding-right: 80px;
+}
+
+confirm {
+  grid-area: confirm;
+  margin: auto;
+}
+
+confirm button {
+  background-color: orange;
+  color: black;
+  cursor: pointer;
+  padding: 20px;
+  margin: auto;
+  gap: 50px;
+}
+
+confirm button a {
+  text-decoration: none;
+  font-size: 17pt;
+  color: black ;
+  margin: auto;
+  font-family: 'Lato', sans-serif;
+}
+
+confirm button:hover, a:hover{
+  background-color: black;
+  color: orange;
+}
+
+footer { grid-area: footer;
+background-color: black; }
+
+footer img{
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  display:inline-block;
+}
+
+footer p,a {
+  text-align: center;
+  font-size: 13px;
+  color: white;
+}
+

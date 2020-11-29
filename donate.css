@@ -1,0 +1,198 @@
+html, body, .grid-container { height: 100%; margin: 0; 
+font-family: 'Lato', sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 0.9fr 1.4fr 1.4fr 0.9fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "logo nav nav nav"
+    "header header header header"
+    "donation-1 donation-2 donation-3 donation-4"
+    "donation-5 own-donation own-donation own-donation"
+    "footer footer footer footer";
+}
+
+
+logo img {
+   grid-area: logo;
+   max-width: 80%;
+   max-height: 80%;
+   margin: auto;
+ }
+ logo {
+   background-color: black;
+ }
+
+
+nav {
+   grid-area: nav;
+   background-color: black;
+ }
+ 
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color:black;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 36px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color:white;
+  color:black;
+}
+
+header { grid-area: header; }
+
+header h1 {
+  color: black;
+  text-align: center;
+  font-size: 30pt;
+}
+
+donation-1 { 
+  grid-area: donation-1; 
+  display:inline-block;
+  min-height: 40px;
+  }
+
+donation-1 button {
+margin-left:100px
+}
+
+donation-2 {
+  grid-area: donation-2; 
+  display:inline-block;
+  }
+
+donation-2 button {
+margin-left: 80px;
+}
+
+donation-3 button {
+ margin-left: 70px;
+}
+
+donation-4 button {
+  margin-left: 80px;
+}
+
+donation-3 { 
+  grid-area: donation-3;
+  display:inline-block; 
+  }
+
+donation-4 { 
+  grid-area: donation-4; 
+  display:inline-block;
+  }
+
+donation-5 { 
+  grid-area: donation-5; 
+  display:inline-block;
+  }
+
+donation-5 button {
+  margin-left: 100px;
+}
+
+own-donation a {
+  display:inline-block;
+  font-size: 20pt;
+ }
+
+own-donation {
+grid-area: own-donation; 
+}
+
+own-donation button {
+  height: 130px;
+}
+
+own-donation input {
+  font-size: 20pt;
+}
+
+own-donation label {
+  font-size: 20pt;
+  font-family: 'Lato', sans-serif;
+}
+
+button a h2 p {
+  color: black;
+  text-decoration: none;
+  font-size: 14pt;
+}
+
+button {
+  background-color: orange;
+  border: black;
+  border-style: solid; 
+  margin: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  display: table;
+}
+
+donation-1 a,
+donation-2 a,
+donation-3 a,
+donation-4 a,
+donation-5 a {
+text-decoration: none;
+color: black;
+font-size: 14pt;
+display: table;
+height:50%;
+flex-basis: auto;
+}
+
+donation-1 button,
+donation-2 button,
+donation-3 button,
+donation-4 button,
+donation-5 button {
+  width: 50%;
+}
+
+/* For presentation only, no need to copy the code below */
+
+
+.grid-container *:after {
+  content:attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+footer { grid-area: footer;
+background-color: black; }
+
+footer img{
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  display:inline-block;
+}
+
+footer p,a {
+  text-align: center;
+  font-size: 13px;
+  color: white;
+}

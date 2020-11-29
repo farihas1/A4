@@ -1,0 +1,90 @@
+html, body, .grid-container { 
+  height: 100%; 
+  margin: 0; 
+  font-family: 'Lato', sans-serif;
+    background-image: url("images/background final page .jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+   }
+
+body {
+    overflow: scroll;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.6fr 1.4fr 1fr 1fr;
+  grid-template-rows: 0.2fr 2.6fr 0.2fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "logo nav nav nav"
+    "content content content content"
+    "footer footer footer footer";
+}
+
+logo img {
+   grid-area: logo;
+   max-width: 80%;
+   max-height: 80%;
+   margin: auto;
+ }
+ logo {
+   background-color: black;
+ }
+
+nav {
+   grid-area: nav;
+   background-color: black;
+ }
+ 
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color:black;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 36px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color:white;
+  color:black;
+}
+
+content h1 {
+  text-align: center;
+  font-size: 30pt;
+  margin: auto;
+  padding-top: 90px;
+  color: green;
+}
+
+content h2 {
+  text-align: center;
+  padding-top: 20px;
+  margin: auto;
+
+}
+
+content h3 {
+  text-align: center;
+  padding-top: 20px;
+  margin: auto;
+}
+
+content {
+  grid-area: content;
+  margin: auto;
+}
+
