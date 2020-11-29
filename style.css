@@ -89,7 +89,8 @@ content button {
   background-color: orange;
   border: black;
   border-style: solid; 
-  padding: 20px;
+  padding: 40px;
+  font-size: 20pt;
   cursor: pointer;
   display: block;
   margin: 20px auto;
@@ -99,8 +100,9 @@ content button {
 content a {
   color: black;
   text-decoration: none;
-  font-size: 14pt;
+  font-size: 20pt;
 }
+
 
 content iframe {
   display: block;
