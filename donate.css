@@ -68,29 +68,13 @@ header h1 {
 donation-1 { 
   grid-area: donation-1; 
   display:inline-block;
-  min-height: 40px;
   }
-
-donation-1 button {
-margin-left:100px
-}
 
 donation-2 {
   grid-area: donation-2; 
   display:inline-block;
   }
 
-donation-2 button {
-margin-left: 80px;
-}
-
-donation-3 button {
- margin-left: 70px;
-}
-
-donation-4 button {
-  margin-left: 80px;
-}
 
 donation-3 { 
   grid-area: donation-3;
@@ -106,10 +90,6 @@ donation-5 {
   grid-area: donation-5; 
   display:inline-block;
   }
-
-donation-5 button {
-  margin-left: 100px;
-}
 
 own-donation a {
   display:inline-block;
@@ -168,6 +148,7 @@ donation-3 button,
 donation-4 button,
 donation-5 button {
   width: 50%;
+  margin: auto;
 }
 
 /* For presentation only, no need to copy the code below */
@@ -195,4 +176,33 @@ footer p,a {
   text-align: center;
   font-size: 13px;
   color: white;
+}
+
+@media screen and (max-width: 375px) {
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "logo"
+    "nav"
+    "header"
+    "donation-1"
+    "donation-2"
+    "donation-3"
+    "donation-4"
+    "donation-5"
+    "own-donation"
+    "footer";
+}
+
+donation-1, donation-2, donation-3, donation-4, donation-5, own-donation {
+  display: block;
+  padding: 10px;
+}
+
+nav ul a {
+  font-size: 11pt;
+}
 }

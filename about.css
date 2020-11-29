@@ -136,3 +136,38 @@ footer p,a {
   font-size: 13px;
   color: white;
 }
+
+ @media screen and (max-width: 375px) {
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "logo"
+    "nav"
+    "header"
+    "about-you"
+    "payment"
+    "next"
+    "footer";
+}
+
+nav ul a {
+  font-size: 12pt;
+  padding: 20px;
+
+}
+
+about-you {
+  margin: auto;
+}
+
+payment {
+  margin: auto;
+}
+next button {
+  margin-bottom: 10px;
+}
+}

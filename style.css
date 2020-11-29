@@ -124,17 +124,28 @@ footer p,a {
   color: white;
 }
 
-@media screen and (max-width: 460px) {
-  .grid-container {
-    display: block;
-  }
+@media screen and (max-width: 375px) {
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "logo"
+    "nav"
+    "content"
+    "footer";
+}
 
-  nav,
-  logo,
-  search,
-  content,
-  footer {
-    width: 100%;
-    min-height: 200px;
-  }
+logo {
+  margin:auto;
+}
+
+content p {
+  font-size: 13pt;
+}
+
+nav ul a {
+  font-size: 11pt;
+}
 }
